@@ -1,32 +1,24 @@
-# Community Apps Starter Template
+# Athuull's Unraid Community Applications Repository
 
-Use this repository as a GitHub template when you want a clean starting point for a new Community Apps submission repository.
+This repository hosts Unraid Docker application templates for **Hera** and its companion service **Downtify**.
 
-## Quick Start
+## Available Applications
 
-1. Click **Use this template** on GitHub and create your own repository.
-2. Replace the placeholder values in `ca_profile.xml`, `templates/example-app.xml`, and `plugins/example-plugin.xml`.
-3. Replace `icon.svg` with your own repository icon, or update `ca_profile.xml` to point at a hosted icon you control.
-4. Keep one XML file per Docker app under `templates/`.
-5. Keep one XML wrapper per plugin under `plugins/`.
-6. Delete the example files you do not need.
-7. Commit and push your repository.
-8. Run **Validate** and **Scan** in the Community Apps submit flow: `/submit`.
+### [Hera](https://github.com/athuull/hera)
+Hera is a self-hosted music recommendation, automated downloader, and library synchronization service powered by Last.fm and Downtify.
 
-## Starter Files
+- **Docker Image**: `athuul/hera:latest`
+- **Template**: [`templates/hera.xml`](templates/hera.xml)
+- **WebUI**: Port `8080`
 
-- `README.md`: onboarding notes for whoever maintains the repository.
-- `LICENSE`: starter MIT license text. Replace the placeholder copyright line.
-- `.gitignore`: keeps common OS junk out of the repo.
-- `icon.svg`: starter repository icon referenced by `ca_profile.xml`.
-- `ca_profile.xml`: repository overview and support metadata shown in Community Apps.
-- `templates/example-app.xml`: starter Docker application template.
-- `plugins/example-plugin.xml`: starter plugin wrapper.
+### [Downtify](https://github.com/henriquesebastiao/downtify)
+Downtify is an open-source music downloader backend powered by FastAPI, yt-dlp, and ffmpeg.
 
-## Submission Notes
+- **Docker Image**: `henriquesebastiao/downtify:latest`
+- **Template**: [`templates/downtify.xml`](templates/downtify.xml)
+- **Port**: `8000`
 
-- Keep `ca_profile.xml` in the repository root.
-- Every Docker app entry needs a `<Repository>` tag.
-- Every plugin entry needs a `<PluginURL>` tag.
-- Keep each template's `TemplateURL` pointed at the raw GitHub URL for that exact XML file.
-- Use an OSI-approved license before submitting.
+## Support & Issues
+
+For issues or feature requests with Hera:
+- [Hera GitHub Issues](https://github.com/athuull/hera/issues)
